@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vua Thợ (Spoor) — Lâm Hoài Bảo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        black: "#111111",
+                        white: "#ffffff",
+                        gray: {
+                            500: "#767676",
+                            200: "#E5E5E5"
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .underline-anim {
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-anim::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .underline-anim:hover::after {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
+
+    <!-- Navigation -->
+    <nav
+        class="w-full pt-10 pb-8 px-6 md:px-12 flex justify-between items-center fixed top-0 bg-white/90 backdrop-blur-sm z-50">
+        <a class="text-xl md:text-2xl font-bold tracking-tight" href="index.html">Lâm Hoài Bảo</a>
+        <div class="hidden md:flex gap-8 items-center text-sm font-medium">
+            <a class="text-black underline-anim" href="index.html">projects</a>
+            <a class="text-gray-500 hover:text-black transition-colors" href="index.html#about">about</a>
+            <a class="text-gray-500 hover:text-black transition-colors" href="index.html#contact">resume</a>
+        </div>
+        <button
+            class="text-sm font-medium border border-black/10 px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all md:hidden">
+            Menu
+        </button>
+    </nav>
+
+    <main class="mt-40 px-6 md:px-12 max-w-[1600px] mx-auto pb-40">
+
+        <!-- Hero Title -->
+        <section class="w-full py-10">
+            <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-bold leading-[1.1] tracking-tight mb-8">
+                Vua Thợ
+            </h1>
+            <p class="text-2xl md:text-3xl text-gray-500 font-light leading-relaxed mb-16 pb-16">
+                Ứng dụng kết nối Khách Hàng với Thợ của mọi ngành nghề
+            </p>
+
+            <!-- Metadata Grid -->
+
+        </section>
+
+        <!-- Hero Image -->
+        <div class="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 mb-32 overflow-hidden">
+            <img src="VT.png" alt="Hero Banner" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Intro -->
+        <section class="max-w-5xl mx-auto mb-32">
+            <div class="space-y-8 text-xl md:text-2xl text-black font-light leading-relaxed">
+                <p>
+                    Sứ mệnh của Vua Thợ là cung cấp dịch vụ sửa chữa, xây dựng uy tín, chất lượng với giá cả hợp lý,
+                    giúp khách hàng an tâm và hài lòng.
+                </p>
+
+
+            </div>
+        </section>
+
+        <hr class="border-gray-200 mb-32 max-w-5xl mx-auto">
+
+        <!-- Roadmap -->
+        <section class="max-w-5xl mx-auto mb-32">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Lộ trình sản phẩm</h2>
+            <div class="text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-12 space-y-6">
+                <p>Chúng tôi đã xây dựng ứng dụng trong thời điểm kinh tế dần trở nên khó khăn, thất nghiệp diễn ra ở
+                    khắp nơi, chúng tôi muốn làm gì đó cho những người đang chơi vơi ngoài kia, những người có nghề
+                    trong
+                    tay nhưng vẫn chưa thể kiếm ra việc làm vì nhiều lý do.</p>
+                <p>Xuyên suốt dự án này, tôi đảm nhận vai trò thiết kế UX UI và mọi người trong team dev cùng tôi thảo
+                    luận và làm cùng nhau.
+                </p>
+            </div>
+            <!-- Roadmap Image Placeholders -->
+            <div class="w-full aspect-video bg-gray-100">
+                <img src="2.png" class="w-full h-full object-cover">
+                <img src="3.png" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Research -->
+
+
+        <!-- Quotes Section -->
+        <section class="max-w-5xl mx-auto mb-32">
+
+            <div
+                class="bg-gray-50 border border-gray-100 p-12 md:p-20 text-xl md:text-3xl font-light leading-relaxed italic text-black space-y-12">
+                <p>“Tôi đã khá lo lắng vì đây là dự án đầu tay của tôi, và cũng một phần là do team chỉ có mình tôi là
+                    UX UI,
+                    mọi thứ tôi đều phải tự mình tìm tòi thử đi thử lại, làm xong lại hội ý cùng anh em dev và sếp tôi.
+                    Nhưng rồi mọi chuyện cũng ổn thỏa, và tôi cũng đã học hỏi được rất nhiều điều từ dự án này.”</p>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="max-w-5xl mx-auto mb-32">
+
+            <div class="space-y-32">
+                <!-- Feature 1 -->
+                <div class="flex flex-col gap-10">
+                    <div class="w-full max-w-3xl">
+                        <span
+                            class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">ONBOARD</span>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6">Trải nghiệm Onboard mượt mà</h3>
+                        <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                            Bằng cách tích hợp đăng nhập qua số điện thoại, Vua Thợ mang đến một trải nghiệm khởi đầu
+                            đơn giản cho bất kỳ người dùng mới nào.
+                        </p>
+                    </div>
+                    <div class="w-full">
+                        <img src="4.png" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="w-full aspect-[4/5] bg-gray-100"></div>
+                    <div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">MALL</span>
+                        <h3 class="text-3xl font-bold mb-6">Biểu tượng đạo đức cho sản phẩm</h3>
+                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">100% đối tác xuất hiện trên
+                            Spoor đều là các thương hiệu có đạo đức. Nhãn mác mỗi sản phẩm đều gắn các biểu tượng bền
+                            vững để chứng minh rõ ràng những giá trị tốt đẹp mà sản phẩm đó đang ủng hộ.</p>
+                        <blockquote class="pl-6 border-l-2 border-black text-gray-500 italic">
+                            “Bức tường đề xuất sản phẩm thật tuyệt. Đây là một định hướng xuất sắc dành cho những người
+                            dùng luôn mong muốn mua sắm các mặt hàng sản xuất công bằng.”
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">MALL</span>
+                        <h3 class="text-3xl font-bold mb-6">Câu chuyện đằng sau mỗi tấm áo</h3>
+                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">Người dùng hoàn toàn có thể
+                            hiểu sâu hơn về câu chuyện cuộc đời của từng món đồ: chi phí tạo ra chúng, vật liệu từ đâu,
+                            chúng ra đời tại nhà máy nào, và việc mua chúng sẽ tạo ra những tác động tích cực thay đổi
+                            thế giới như thế nào.</p>
+                    </div>
+                    <div class="w-full aspect-[4/5] bg-gray-100 order-1 lg:order-2"></div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="w-full aspect-[4/5] bg-gray-100"></div>
+                    <div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">ME</span>
+                        <h3 class="text-3xl font-bold mb-6">Đo lường tác động bằng Huy hiệu</h3>
+                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">Hệ thống Giải thưởng và Huy
+                            hiệu (Awards) của Spoor đo đếm trực quan mọi tác động tốt của bạn thông qua việc
+                            gamification (game hóa) để giữ chân người dùng. Những người dùng trẻ tuổi cực kì dễ đạt được
+                            khung bậc khoái cảm "Aha moment" khi trải nghiệm cảm giác như khi thăng cấp trong game.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final thoughts -->
+        <section class="max-w-5xl mx-auto mb-32 border-t border-gray-200 pt-32">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Các bước tiếp theo</h2>
+            <ol
+                class="list-decimal list-outside ml-6 text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-16 space-y-4">
+                <li>Tiến hành nghiên cứu người dùng sâu hơn để xác định chính xác các điểm đau (pain points) thực tế.
+                </li>
+                <li>Thực hiện các đợt Usability Test (kiểm tra tính khả dụng) và tiếp tục lặp lại chỉnh sửa thiết kế.
+                </li>
+                <li>Trình bày và đo lường tính khả thi của ý tưởng với các bên liên quan khác trong dự án.</li>
+                <li>Phát triển mở rộng thêm các tính năng như hướng dẫn chăm sóc sản phẩm vào trang thông tin. Qua đó
+                    khuyến khích người dùng giữ gìn quần áo của họ theo cách thân thiện môi trường nhất, cũng như chuyển
+                    đổi các giải thưởng ảo thành phần thưởng thật.</li>
+            </ol>
+
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10 mt-20">Phản tư (Reflection)</h2>
+            <div class="text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-16 space-y-8">
+                <p><strong>Nhiệm vụ "Bất Khả Thi":</strong> Chỉ với vỏn vẹn 3 ngày cho mọi công đoạn thiết kế, việc soạn
+                    thảo ra một kế hoạch làm việc rõ ràng và chia nhỏ các siêu task tử thần thành những viên kẹo nhỏ là
+                    cực kỳ sống còn. Chúng tôi dựa vào các công cụ năng suất như Kanban Board để siết chặt tiến độ. Quá
+                    trình này cứu rỗi chúng tôi khỏi việc bùng nổ căng thẳng.</p>
+                <p><strong>Ác quỷ giấu mặt trong chi tiết:</strong> Dưới áp lực của kỳ sprint định mệnh 3 ngày, để giữ
+                    được sự đồng điệu trên hàng chục chi tiết thiết kế là viễn cảnh gần như viển vông. Tôi đánh phủ đầu
+                    bài toán này bằng cách phải thiết lập xong Design System (Hệ thống thiết kế) trước khi làm bắt cứ
+                    thứ gì. Và tôi cũng dành luôn tận 2 tiếng cuối cùng chỉ để rà soát soi lỗi UI trong lúc đồng đội vật
+                    vã viết báo cáo nộp dự án.</p>
+            </div>
+
+            <div class="text-center mt-32 text-2xl font-light italic text-gray-500">
+                <p>Cảm ơn bạn đã cuộn tới trang cuối cùng.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-24 pb-12 px-6 md:px-12">
+        <div
+            class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-sm font-medium gap-8">
+            <div>© 2024 Lâm Hoài Bảo.</div>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-gray-400 transition-colors">TikTok</a>
+                <a href="#" class="hover:text-gray-400 transition-colors">LinkedIn</a>
+                <a href="index.html" class="hover:text-gray-400 transition-colors underline">Return home</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
