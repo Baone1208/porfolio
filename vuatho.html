@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Vua Thợ (Spoor) — Lâm Hoài Bảo</title>
+    <title>Vua Thợ — Lâm Hoài Bảo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -163,80 +163,37 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="w-full aspect-[4/5] bg-gray-100"></div>
-                    <div>
-                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">MALL</span>
-                        <h3 class="text-3xl font-bold mb-6">Biểu tượng đạo đức cho sản phẩm</h3>
-                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">100% đối tác xuất hiện trên
-                            Spoor đều là các thương hiệu có đạo đức. Nhãn mác mỗi sản phẩm đều gắn các biểu tượng bền
-                            vững để chứng minh rõ ràng những giá trị tốt đẹp mà sản phẩm đó đang ủng hộ.</p>
-                        <blockquote class="pl-6 border-l-2 border-black text-gray-500 italic">
-                            “Bức tường đề xuất sản phẩm thật tuyệt. Đây là một định hướng xuất sắc dành cho những người
-                            dùng luôn mong muốn mua sắm các mặt hàng sản xuất công bằng.”
-                        </blockquote>
+
+                <style>
+                    @keyframes load-progress {
+                        from {
+                            width: 0%;
+                        }
+
+                        to {
+                            width: 30%;
+                        }
+                    }
+                </style>
+                <div class="max-w-xl mx-auto mt-32 mb-20">
+                    <p class="text-center text-xl md:text-2xl font-light italic text-gray-500 mb-10">
+                        Chưa xong đâu, đợi tiếp ik.
+                    </p>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-100 rounded-full h-2 md:h-3 overflow-hidden relative">
+                        <div class="bg-black h-full rounded-full absolute top-0 left-0"
+                            style="width: 30%; animation: load-progress 1.5s ease-out forwards;">
+                        </div>
+                    </div>
+
+                    <!-- Text Indicator -->
+                    <div
+                        class="flex justify-between items-center mt-4 text-xs md:text-sm font-bold tracking-widest uppercase">
+                        <span class="text-gray-400">Đang làm...</span>
+                        <span class="text-black">30%</span>
                     </div>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="order-2 lg:order-1">
-                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">MALL</span>
-                        <h3 class="text-3xl font-bold mb-6">Câu chuyện đằng sau mỗi tấm áo</h3>
-                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">Người dùng hoàn toàn có thể
-                            hiểu sâu hơn về câu chuyện cuộc đời của từng món đồ: chi phí tạo ra chúng, vật liệu từ đâu,
-                            chúng ra đời tại nhà máy nào, và việc mua chúng sẽ tạo ra những tác động tích cực thay đổi
-                            thế giới như thế nào.</p>
-                    </div>
-                    <div class="w-full aspect-[4/5] bg-gray-100 order-1 lg:order-2"></div>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="w-full aspect-[4/5] bg-gray-100"></div>
-                    <div>
-                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">ME</span>
-                        <h3 class="text-3xl font-bold mb-6">Đo lường tác động bằng Huy hiệu</h3>
-                        <p class="text-lg text-gray-700 font-light leading-relaxed mb-8">Hệ thống Giải thưởng và Huy
-                            hiệu (Awards) của Spoor đo đếm trực quan mọi tác động tốt của bạn thông qua việc
-                            gamification (game hóa) để giữ chân người dùng. Những người dùng trẻ tuổi cực kì dễ đạt được
-                            khung bậc khoái cảm "Aha moment" khi trải nghiệm cảm giác như khi thăng cấp trong game.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final thoughts -->
-        <section class="max-w-5xl mx-auto mb-32 border-t border-gray-200 pt-32">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Các bước tiếp theo</h2>
-            <ol
-                class="list-decimal list-outside ml-6 text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-16 space-y-4">
-                <li>Tiến hành nghiên cứu người dùng sâu hơn để xác định chính xác các điểm đau (pain points) thực tế.
-                </li>
-                <li>Thực hiện các đợt Usability Test (kiểm tra tính khả dụng) và tiếp tục lặp lại chỉnh sửa thiết kế.
-                </li>
-                <li>Trình bày và đo lường tính khả thi của ý tưởng với các bên liên quan khác trong dự án.</li>
-                <li>Phát triển mở rộng thêm các tính năng như hướng dẫn chăm sóc sản phẩm vào trang thông tin. Qua đó
-                    khuyến khích người dùng giữ gìn quần áo của họ theo cách thân thiện môi trường nhất, cũng như chuyển
-                    đổi các giải thưởng ảo thành phần thưởng thật.</li>
-            </ol>
-
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10 mt-20">Phản tư (Reflection)</h2>
-            <div class="text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-16 space-y-8">
-                <p><strong>Nhiệm vụ "Bất Khả Thi":</strong> Chỉ với vỏn vẹn 3 ngày cho mọi công đoạn thiết kế, việc soạn
-                    thảo ra một kế hoạch làm việc rõ ràng và chia nhỏ các siêu task tử thần thành những viên kẹo nhỏ là
-                    cực kỳ sống còn. Chúng tôi dựa vào các công cụ năng suất như Kanban Board để siết chặt tiến độ. Quá
-                    trình này cứu rỗi chúng tôi khỏi việc bùng nổ căng thẳng.</p>
-                <p><strong>Ác quỷ giấu mặt trong chi tiết:</strong> Dưới áp lực của kỳ sprint định mệnh 3 ngày, để giữ
-                    được sự đồng điệu trên hàng chục chi tiết thiết kế là viễn cảnh gần như viển vông. Tôi đánh phủ đầu
-                    bài toán này bằng cách phải thiết lập xong Design System (Hệ thống thiết kế) trước khi làm bắt cứ
-                    thứ gì. Và tôi cũng dành luôn tận 2 tiếng cuối cùng chỉ để rà soát soi lỗi UI trong lúc đồng đội vật
-                    vã viết báo cáo nộp dự án.</p>
-            </div>
-
-            <div class="text-center mt-32 text-2xl font-light italic text-gray-500">
-                <p>Cảm ơn bạn đã cuộn tới trang cuối cùng.</p>
-            </div>
         </section>
 
     </main>
