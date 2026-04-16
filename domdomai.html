@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đom Đóm AI | UX/UI Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#f8f8ff",
+                        "on-error-container": "#782232",
+                        "on-error": "#fff7f7",
+                        "secondary-fixed": "#e4e1e6",
+                        "on-primary-fixed-variant": "#5c5b5e",
+                        "tertiary": "#535f78",
+                        "on-tertiary-container": "#434f66",
+                        "surface": "#f8f9fa",
+                        "on-primary": "#faf7fb",
+                        "on-secondary": "#fbf8fc",
+                        "outline-variant": "#abb3b7",
+                        "outline": "#737c7f",
+                        "on-secondary-fixed": "#3f3f43",
+                        "on-primary-fixed": "#3f3f42",
+                        "background": "#F9FAFB", /* Overridden by brand requirement */
+                        "error-container": "#ff8b9a",
+                        "secondary-container": "#e4e1e6",
+                        "on-secondary-fixed-variant": "#5c5b5f",
+                        "error": "#9e3f4e",
+                        "error-dim": "#4f0116",
+                        "primary-fixed-dim": "#d6d3d7",
+                        "inverse-surface": "#0c0f10",
+                        "on-background": "#18181B", /* Overridden by brand requirement */
+                        "surface-container-low": "#f1f4f6",
+                        "secondary-fixed-dim": "#d6d3d8",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-dim": "#47536b",
+                        "tertiary-fixed-dim": "#c3cfeb",
+                        "primary": "#5f5e61",
+                        "primary-dim": "#535255",
+                        "secondary-dim": "#535356",
+                        "on-secondary-container": "#525155",
+                        "on-tertiary-fixed-variant": "#4c5870",
+                        "tertiary-container": "#d1ddfa",
+                        "on-surface-variant": "#586064",
+                        "primary-fixed": "#e4e1e6",
+                        "on-surface": "#18181B",
+                        "secondary": "#5f5e62",
+                        "surface-variant": "#dbe4e7",
+                        "inverse-primary": "#f9f5fa",
+                        "surface-tint": "#5f5e61",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eaeff1",
+                        "surface-container-high": "#e2e9ec",
+                        "on-tertiary-fixed": "#303c53",
+                        "surface-dim": "#d1dce0",
+                        "inverse-on-surface": "#9b9d9e",
+                        "primary-container": "#e4e1e6",
+                        "surface-container-highest": "#dbe4e7",
+                        "on-primary-container": "#525155",
+                        "tertiary-fixed": "#d1ddfa",
+                        "brand-olive": "#556B2F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1.0rem", /* Adjusted to match 16px radius request */
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-[#F9FAFB] text-[#18181B] font-body selection:bg-brand-olive selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-[#F9FAFB]/70 backdrop-blur-xl dark:bg-zinc-900/70 docked full-width top-0 sticky z-50 tonal-depth shift">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<div class="font-['Manrope'] text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-100">
+                Lâm Hoài Bảo
+            </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-900 dark:text-white border-b-2 border-zinc-900 dark:border-white pb-1" href="#">Work</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">Expertise</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">About</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">Contact</a>
+</div>
+<!-- Mobile Toggle -->
+<div class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-24 px-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-12">
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tight leading-[0.9] max-w-4xl">
+                    Đom Đóm AI: <br/>
+<span class="text-zinc-400">Trợ lý Nông nghiệp Thông minh</span>
+</h1>
+<div class="w-full aspect-[16/9] overflow-hidden bg-surface-container-low rounded-xl">
+<img alt="Project Hero Banner" class="w-full h-full object-cover grayscale-[0.2]" data-alt="Modern high-tech greenhouse with glass roof and sunset light filtering through rows of hydroponic leafy greens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE_0kdqwY2JUjLVxNlMra3-c_JLU06qSk9A_jfYL7IHodCfGtgfBhwX8Eey5IENNhVYm5ypZqIBxJHMRnU5lpVwiHEmJ9fFcnx3cqGPCkLiTBjJPrQnECbPyW8utrHD8Ea7dzDoUrOmWlK77RX2cZ4ULlAWYSGa6KIQPIBrE7VRoktdFhos1NKVA83bI88btNwm2TnR89q65a-uCVsgcegzySyYJIe2a_MJFnXmovqjFaYqqdl2AxSeNzyeZoxhREjHX4hS75Euyg"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-4">
+<div class="md:col-span-4">
+<p class="font-label text-xs uppercase tracking-widest text-zinc-500 mb-4">Project Overview</p>
+<p class="text-lg leading-relaxed">Một giải pháp ứng dụng trí tuệ nhân tạo nhằm tối ưu hóa năng suất cây trồng cho nông dân Việt Nam trong bối cảnh biến đổi khí hậu phức tạp.</p>
+</div>
+<div class="md:col-span-2 md:col-start-7">
+<p class="font-label text-xs uppercase tracking-widest text-zinc-500 mb-2">Role</p>
+<p class="font-semibold">Lead UI/UX Designer</p>
+</div>
+<div class="md:col-span-2">
+<p class="font-label text-xs uppercase tracking-widest text-zinc-500 mb-2">Duration</p>
+<p class="font-semibold">3 Months (2023)</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Problem Section -->
+<section class="bg-brand-olive text-on-tertiary py-32">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-4 flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter mb-8">Vấn đề</h2>
+<p class="text-lg text-white/80 max-w-sm">Nông nghiệp truyền thống đang đối mặt với những thách thức chưa từng có do sự bất ổn của môi trường và thiếu hụt dữ liệu chính xác.</p>
+</div>
+<div class="hidden md:block">
+<span class="font-headline text-[10rem] font-extrabold leading-none opacity-10 select-none">01</span>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white/5 p-8 rounded-lg border border-white/10 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-white/60">thunderstorm</span>
+<h3 class="font-headline text-xl font-bold">Thời tiết khó lường</h3>
+<p class="text-sm leading-relaxed text-white/70">Các đợt thiên tai đột ngột và chu kỳ mùa vụ bị thay đổi khiến nông dân không kịp trở tay, dẫn đến mất trắng mùa màng.</p>
+</div>
+<div class="bg-white/5 p-8 rounded-lg border border-white/10 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-white/60">database</span>
+<h3 class="font-headline text-xl font-bold">Thiếu dữ liệu thực tế</h3>
+<p class="text-sm leading-relaxed text-white/70">Quyết định canh tác dựa trên kinh nghiệm truyền miệng thay vì số liệu đo đạc thực tế tại vườn, làm giảm hiệu quả canh tác.</p>
+</div>
+<div class="bg-white/5 p-8 rounded-lg border border-white/10 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-white/60">pest_control</span>
+<h3 class="font-headline text-xl font-bold">Dịch bệnh bùng phát</h3>
+<p class="text-sm leading-relaxed text-white/70">Sâu bệnh không được phát hiện sớm và xử lý đúng cách, dẫn đến việc lạm dụng thuốc bảo vệ thực vật không cần thiết.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Solution Section -->
+<section class="bg-[#F9FAFB] py-32">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="mb-24 flex items-end justify-between">
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-zinc-500 mb-4">The Solution</p>
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter">Giải pháp AI cho nông nghiệp</h2>
+</div>
+<span class="font-headline text-6xl font-extrabold text-surface-container-high hidden md:block">02</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Solution Card 1 -->
+<div class="group bg-surface-container-lowest border border-zinc-200 p-10 rounded-lg hover:border-brand-olive transition-all duration-500">
+<div class="mb-12 flex justify-between items-start">
+<div class="w-14 h-14 bg-surface-container-low rounded-full flex items-center justify-center text-brand-olive group-hover:bg-brand-olive group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">partly_cloudy_day</span>
+</div>
+<span class="font-label text-xs text-zinc-300 font-bold">01</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Dự báo thời tiết AI</h3>
+<p class="text-zinc-600 leading-relaxed mb-8">Sử dụng mô hình Deep Learning để dự báo chính xác điều kiện khí hậu vi mô ngay tại tọa độ trang trại.</p>
+<div class="w-full h-px bg-zinc-100 mb-8"></div>
+<button class="flex items-center gap-2 font-label text-sm font-semibold uppercase tracking-wider group-hover:text-brand-olive transition-colors">
+                            Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+<!-- Solution Card 2 -->
+<div class="group bg-surface-container-lowest border border-zinc-200 p-10 rounded-lg hover:border-brand-olive transition-all duration-500">
+<div class="mb-12 flex justify-between items-start">
+<div class="w-14 h-14 bg-surface-container-low rounded-full flex items-center justify-center text-brand-olive group-hover:bg-brand-olive group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<span class="font-label text-xs text-zinc-300 font-bold">02</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Phân tích sức khỏe</h3>
+<p class="text-zinc-600 leading-relaxed mb-8">Nhận diện sớm dấu hiệu sâu bệnh thông qua hình ảnh camera smartphone với độ chính xác lên đến 98%.</p>
+<div class="w-full h-px bg-zinc-100 mb-8"></div>
+<button class="flex items-center gap-2 font-label text-sm font-semibold uppercase tracking-wider group-hover:text-brand-olive transition-colors">
+                            Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+<!-- Solution Card 3 -->
+<div class="group bg-surface-container-lowest border border-zinc-200 p-10 rounded-lg hover:border-brand-olive transition-all duration-500">
+<div class="mb-12 flex justify-between items-start">
+<div class="w-14 h-14 bg-surface-container-low rounded-full flex items-center justify-center text-brand-olive group-hover:bg-brand-olive group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+<span class="font-label text-xs text-zinc-300 font-bold">03</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Đề xuất mùa vụ</h3>
+<p class="text-zinc-600 leading-relaxed mb-8">Thuật toán tối ưu hóa lựa chọn giống cây trồng dựa trên nhu cầu thị trường và thổ nhưỡng địa phương.</p>
+<div class="w-full h-px bg-zinc-100 mb-8"></div>
+<button class="flex items-center gap-2 font-label text-sm font-semibold uppercase tracking-wider group-hover:text-brand-olive transition-colors">
+                            Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- App Screen Gallery -->
+<section class="py-32 overflow-hidden bg-zinc-100">
+<div class="max-w-[1440px] mx-auto px-8 mb-16">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Giao diện ứng dụng</h2>
+</div>
+<div class="flex gap-8 overflow-x-auto no-scrollbar px-8 pb-8 snap-x">
+<!-- Phone Frame 1 -->
+<div class="flex-shrink-0 w-80 aspect-[9/19] bg-zinc-900 rounded-[2.5rem] p-3 shadow-2xl border-4 border-zinc-800 snap-center">
+<div class="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+<img alt="Dashboard Screen" class="w-full h-full object-cover" data-alt="Modern mobile app dashboard for agriculture showing data charts of soil moisture and light intensity with clean white UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAlu9EjZ2PXJa6IGmJTIQNOjFR5GUzfALLUSOhGblQCUcOH2ywsdi26PYCYxrbbS2Av1uXQTNAzzM3gVKMrxkiXpIBpfvzgLD3pwzR6cyuw0EBISDIN-3ErfRhl1M3TEWL2ovnFM8-1Fx_2v5_0FiKMU9Rlm5uW4sec5SbcN4jormlQ4SrbvpnfH2E9Q7dWbkOnlD7XEj2XjQvrcIK2YlcfPfB-p4LneMrrOYG1BGo5BACYj7pok5LMN1rGe8gdgIgKAamphxK93w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<p class="text-white text-xs font-label uppercase tracking-widest mb-1">Dashboard</p>
+<p class="text-white font-bold text-lg">Quản lý tổng thể</p>
+</div>
+</div>
+</div>
+<!-- Phone Frame 2 -->
+<div class="flex-shrink-0 w-80 aspect-[9/19] bg-zinc-900 rounded-[2.5rem] p-3 shadow-2xl border-4 border-zinc-800 snap-center">
+<div class="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+<img alt="Camera Analysis Screen" class="w-full h-full object-cover" data-alt="Smartphone camera interface pointing at a green leaf with an AI scanning overlay highlighting plant disease zones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqFOmpyRhZWWAqwyU8zvahomDDUn4NNmOQyy14nNwUiHbg2bE5GRty148-9NZgpa15ZgM32QETlMvOA6JWSlkmFkgkuLs-rkfiNX2RyErE3DfllZq6c4OIiRe6439ClOyL1QzY_C6m31kvtAX4fd5g2doy4c9tJNIc96oan0g06KURi5KiH6LJtPvnyIV8X-fc708RJZWmq9ybjS1VnUO_kNK7IVcN5xQbI-1B9RAioap2Q41Q4ebY4vPWosHyn-F_vt4CYMwklhs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<p class="text-white text-xs font-label uppercase tracking-widest mb-1">AI Camera</p>
+<p class="text-white font-bold text-lg">Phân tích bệnh cây</p>
+</div>
+</div>
+</div>
+<!-- Phone Frame 3 -->
+<div class="flex-shrink-0 w-80 aspect-[9/19] bg-zinc-900 rounded-[2.5rem] p-3 shadow-2xl border-4 border-zinc-800 snap-center">
+<div class="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+<img alt="Weather Screen" class="w-full h-full object-cover" data-alt="Detailed weather forecast screen on a mobile app with minimalist icons and a smooth temperature curve graph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfMoghPCHzdhxAjxtolFDsgXqS7kjQYJFJbqXDpNSgY0aRVCH33cAfT2MXVldkBxgjAQ76q-txy4I1nMDnj2Gd8JxyUP-wE7NJo_NyRscwDUKmjAPPx08s7aQW6haZ5MqTySndfQAVR0VfWNBe1Iasuz95KNzxhCE86iDWlmGNo2KhaXTTzzQE95XazVxW91Ihs5o9hhyik_iIvazLDvSwuQwTFJzzPVlbyM-YaG91b3TnCZYIrAUKAZ6tIfvJW5JtmIuf8FjlYjg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<p class="text-white text-xs font-label uppercase tracking-widest mb-1">Forecast</p>
+<p class="text-white font-bold text-lg">Dự báo khí hậu</p>
+</div>
+</div>
+</div>
+<!-- Phone Frame 4 -->
+<div class="flex-shrink-0 w-80 aspect-[9/19] bg-zinc-900 rounded-[2.5rem] p-3 shadow-2xl border-4 border-zinc-800 snap-center">
+<div class="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+<img alt="Profile Screen" class="w-full h-full object-cover" data-alt="User profile settings page on a professional mobile app with clean list items and a soft green primary button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQsywvWNXpGTrjEjjB6xDoZ0CLcBLmrbrjUWL5R5WtfSQGnN9AFxnYk71qzMyWIsh7-vn3QEsnOlp3XYCIyeVaEwpldQ2Hcj2Oq5DCKDkzO_OrDSe67Hb8WCV7ONV12-jTjSyZoflfX6gRQCEdCBjQHuG95Amzc1coNBVlPbVzWcy-Z3PaQFrnA5OWI3U1wyz0D_lCZNcP-yxKOokQxRuPb89BLsxbN4wDLfXV03rWKXLOrXClBsTlSJV2CU6-mOG5HuaFJpe8Y1w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<p class="text-white text-xs font-label uppercase tracking-widest mb-1">Profile</p>
+<p class="text-white font-bold text-lg">Thiết lập cá nhân</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Transition: Next Project -->
+<section class="max-w-[1440px] mx-auto px-8 py-32 border-t border-zinc-200 mt-24">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-zinc-400 mb-4">Tiếp theo</p>
+<a class="group block" href="vuatho.html">
+<h2 class="font-headline text-6xl md:text-[10rem] font-bold tracking-tighter leading-none group-hover:text-brand-olive transition-colors duration-500">
+                    Vua Thợ
+                </h2>
+<div class="flex justify-between items-center mt-12">
+<p class="text-xl md:text-2xl text-zinc-500 font-light">Nền tảng kết nối thợ chuyên nghiệp.</p>
+<div class="w-20 h-20 rounded-full border border-zinc-200 flex items-center justify-center group-hover:bg-zinc-900 group-hover:border-zinc-900 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl group-hover:text-white">arrow_forward</span>
+</div>
+</div>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F1F4F6] dark:bg-zinc-800 w-full mt-24 tonal-depth-shift">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-[1440px] mx-auto border-t border-zinc-200/20">
+<div class="flex flex-col gap-4 mb-8 md:mb-0">
+<p class="font-['Manrope'] font-bold text-zinc-900 dark:text-zinc-100 text-lg">Lâm Hoài Bảo</p>
+<p class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500">© 2024 Lâm Hoài Bảo. All rights reserved.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Instagram</a>
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Behance</a>
+</div>
+</div>
+</footer>
+</body></html>
