@@ -1,215 +1,327 @@
 <!DOCTYPE html>
-<html lang="vi">
 
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Vua Thợ — Lâm Hoài Bảo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <script>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vua Thợ Case Study | Lâm Hoài Bảo Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#5c5b5f",
+                        "primary-container": "#e4e1e6",
+                        "surface-container-low": "#f1f4f6",
+                        "on-secondary-fixed": "#3f3f43",
+                        "secondary-container": "#e4e1e6",
+                        "secondary-fixed": "#e4e1e6",
+                        "primary-fixed-dim": "#d6d3d7",
+                        "primary-fixed": "#e4e1e6",
+                        "surface-container": "#eaeff1",
+                        "secondary-fixed-dim": "#d6d3d8",
+                        "primary": "#5f5e61",
+                        "on-tertiary": "#f8f8ff",
+                        "error": "#9e3f4e",
+                        "background": "#f8f9fa",
+                        "surface-variant": "#dbe4e7",
+                        "inverse-on-surface": "#9b9d9e",
+                        "surface-bright": "#f8f9fa",
+                        "surface-tint": "#5f5e61",
+                        "outline": "#737c7f",
+                        "error-dim": "#4f0116",
+                        "on-surface": "#2b3437",
+                        "on-primary": "#faf7fb",
+                        "secondary-dim": "#535356",
+                        "primary-dim": "#535255",
+                        "on-secondary-container": "#525155",
+                        "on-tertiary-container": "#434f66",
+                        "on-error": "#fff7f7",
+                        "inverse-surface": "#0c0f10",
+                        "on-primary-fixed": "#3f3f42",
+                        "on-tertiary-fixed-variant": "#4c5870",
+                        "secondary": "#5f5e62",
+                        "surface-dim": "#d1dce0",
+                        "surface-container-high": "#e2e9ec",
+                        "on-error-container": "#782232",
+                        "tertiary-fixed": "#d1ddfa",
+                        "outline-variant": "#abb3b7",
+                        "on-secondary": "#fbf8fc",
+                        "tertiary-container": "#d1ddfa",
+                        "on-background": "#2b3437",
+                        "tertiary-fixed-dim": "#c3cfeb",
+                        "tertiary-dim": "#47536b",
+                        "surface": "#f8f9fa",
+                        "error-container": "#ff8b9a",
+                        "tertiary": "#535f78",
+                        "inverse-primary": "#f9f5fa",
+                        "surface-container-highest": "#dbe4e7",
+                        "on-primary-container": "#525155",
+                        "on-surface-variant": "#586064",
+                        "on-primary-fixed-variant": "#5c5b5e",
+                        "on-tertiary-fixed": "#303c53",
+                        "brand-royal": "#0D47A1",
+                        "brand-charcoal": "#18181B",
+                        "brand-canvas": "#F9FAFB"
                     },
-                    colors: {
-                        black: "#111111",
-                        white: "#ffffff",
-                        gray: {
-                            500: "#767676",
-                            200: "#E5E5E5"
-                        }
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem", // Overridden for 16px as requested
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
                     }
                 }
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
         }
-
-        .underline-anim {
+        .underline-animation {
             position: relative;
-            display: inline-block;
         }
-
-        .underline-anim::after {
+        .underline-animation::after {
             content: '';
             position: absolute;
-            width: 100%;
+            width: 0;
             height: 1px;
             bottom: -2px;
             left: 0;
             background-color: currentColor;
-            transform: scaleX(1);
-            transform-origin: left;
-            transition: transform 0.3s ease;
+            transition: width 0.3s ease;
         }
-
-        .underline-anim:hover::after {
-            transform: scaleX(0);
-            transform-origin: right;
+        .underline-animation:hover::after {
+            width: 100%;
+        }
+        body {
+            background-color: #F9FAFB;
+            color: #18181B;
         }
     </style>
 </head>
-
-<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
-
-    <!-- Navigation -->
-    <nav
-        class="w-full pt-10 pb-8 px-6 md:px-12 flex justify-between items-center fixed top-0 bg-white/90 backdrop-blur-sm z-50">
-        <a class="text-xl md:text-2xl font-bold tracking-tight" href="index.html">Lâm Hoài Bảo</a>
-        <div class="hidden md:flex gap-8 items-center text-sm font-medium">
-            <a class="text-black underline-anim" href="index.html">projects</a>
-            <a class="text-gray-500 hover:text-black transition-colors" href="index.html#about">about</a>
-            <a class="text-gray-500 hover:text-black transition-colors" href="index.html#contact">resume</a>
-        </div>
-        <button
-            class="text-sm font-medium border border-black/10 px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all md:hidden">
-            Menu
-        </button>
-    </nav>
-
-    <main class="mt-40 px-6 md:px-12 max-w-[1600px] mx-auto pb-40">
-
-        <!-- Hero Title -->
-        <section class="w-full py-10">
-            <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-bold leading-[1.1] tracking-tight mb-8">
-                Vua Thợ
+<body class="font-body selection:bg-brand-royal/20 selection:text-brand-royal">
+<!-- TopNavBar -->
+<nav class="bg-[#F9FAFB]/70 backdrop-blur-xl dark:bg-zinc-900/70 docked full-width top-0 sticky z-50 no-line tonal-depth shift">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<span class="font-['Manrope'] text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-100">Lâm Hoài Bảo</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-900 dark:text-white border-b-2 border-zinc-900 dark:border-white pb-1" href="#">Work</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">Expertise</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">About</a>
+<a class="font-['Manrope'] uppercase tracking-[0.05em] text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors" href="#">Contact</a>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-zinc-900">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-8 pt-20 pb-16">
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tight mb-12 text-brand-charcoal max-w-4xl">
+                Vua Thợ: Ứng dụng kết nối Thợ &amp; Khách
             </h1>
-            <p class="text-2xl md:text-3xl text-gray-500 font-light leading-relaxed mb-16 pb-16">
-                Ứng dụng kết nối Khách Hàng với Thợ của mọi ngành nghề
-            </p>
-
-            <!-- Metadata Grid -->
-
-        </section>
-
-        <!-- Hero Image -->
-        <div class="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 mb-32 overflow-hidden">
-            <img src="VT.png" alt="Hero Banner" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Intro -->
-        <section class="max-w-5xl mx-auto mb-32">
-            <div class="space-y-8 text-xl md:text-2xl text-black font-light leading-relaxed">
-                <p>
-                    Sứ mệnh của Vua Thợ là cung cấp dịch vụ sửa chữa, xây dựng uy tín, chất lượng với giá cả hợp lý,
-                    giúp khách hàng an tâm và hài lòng.
-                </p>
-
-
-            </div>
-        </section>
-
-        <hr class="border-gray-200 mb-32 max-w-5xl mx-auto">
-
-        <!-- Roadmap -->
-        <section class="max-w-5xl mx-auto mb-32">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Bối cảnh dự án</h2>
-            <div class="text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-12 space-y-6">
-                <p>Chúng tôi đã xây dựng ứng dụng trong thời điểm kinh tế dần trở nên khó khăn, thất nghiệp diễn ra ở
-                    khắp nơi, chúng tôi muốn làm gì đó cho những người đang chơi vơi ngoài kia, những người có nghề
-                    trong
-                    tay nhưng vẫn chưa thể kiếm ra việc làm vì nhiều lý do.</p>
-                <p>Xuyên suốt dự án này, tôi đảm nhận vai trò thiết kế UX UI và mọi người trong team dev cùng tôi thảo
-                    luận và làm cùng nhau.
-                </p>
-            </div>
-            <!-- Roadmap Image Placeholders -->
-            <div class="w-full aspect-video bg-gray-100">
-                <img src="2.png" class="w-full h-full object-cover">
-                <img src="3.png" class="w-full h-full object-cover">
-            </div>
-        </section>
-
-        <!-- Research -->
-
-
-        <!-- Quotes Section -->
-        <section class="max-w-5xl mx-auto mb-32">
-
-            <div
-                class="bg-gray-50 border border-gray-100 p-12 md:p-20 text-xl md:text-3xl font-light leading-relaxed italic text-black space-y-12">
-                <p>“Trong dự án này, với vai trò là Solo UX/UI Designer, tôi đã chủ động phối hợp chặt chẽ với đội ngũ
-                    Developer. Quá trình trao đổi liên tục và thử nghiệm trực tiếp (trial and error) đã giúp chúng tôi
-                    tối ưu hóa giao diện sát với năng lực kỹ thuật và đẩy nhanh tiến độ ra mắt sản phẩm.”</p>
-            </div>
-        </section>
-
-        <!-- Solution -->
-        <section class="max-w-5xl mx-auto mb-32">
-
-            <div class="space-y-32">
-                <!-- Feature 1 -->
-                <div class="flex flex-col gap-10">
-                    <div class="w-full max-w-3xl">
-                        <span
-                            class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">ONBOARD</span>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-6">Trải nghiệm Onboard mượt mà</h3>
-                        <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
-                            Bằng cách tích hợp đăng nhập qua số điện thoại, Vua Thợ mang đến một trải nghiệm khởi đầu
-                            đơn giản cho bất kỳ người dùng mới nào.
-                        </p>
-                    </div>
-                    <div class="w-full">
-                        <img src="4.png" class="w-full h-auto">
-                    </div>
-                </div>
-
-                <!-- Feature 2 -->
-
-                <style>
-                    @keyframes load-progress {
-                        from {
-                            width: 0%;
-                        }
-
-                        to {
-                            width: 30%;
-                        }
-                    }
-                </style>
-                <div class="max-w-xl mx-auto mt-32 mb-20">
-                    <p class="text-center text-xl md:text-2xl font-light italic text-gray-500 mb-10">
-                        Chưa xong đâu, đợi tiếp ik.
-                    </p>
-
-                    <!-- Progress Bar -->
-                    <div class="w-full bg-gray-100 rounded-full h-2 md:h-3 overflow-hidden relative">
-                        <div class="bg-black h-full rounded-full absolute top-0 left-0"
-                            style="width: 30%; animation: load-progress 1.5s ease-out forwards;">
-                        </div>
-                    </div>
-
-                    <!-- Text Indicator -->
-                    <div
-                        class="flex justify-between items-center mt-4 text-xs md:text-sm font-bold tracking-widest uppercase">
-                        <span class="text-gray-400">Đang làm...</span>
-                        <span class="text-black">30%</span>
-                    </div>
-                </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white pt-24 pb-12 px-6 md:px-12">
-        <div
-            class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-sm font-medium gap-8">
-            <div>© 2024 Lâm Hoài Bảo.</div>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-gray-400 transition-colors">TikTok</a>
-                <a href="#" class="hover:text-gray-400 transition-colors">LinkedIn</a>
-                <a href="index.html" class="hover:text-gray-400 transition-colors underline">Return home</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+<div class="w-full aspect-[16/9] bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Project Banner" class="w-full h-full object-cover" data-alt="Modern high-tech workspace interface with clean minimalist UI elements and architectural blueprints in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6l4LI03b16Z9tEGlYdRw0l2xxYc0gXYnrF3ciC1RPoNoMW053583q74NvTprgmUr5IuelpN4KwPqA21GRIzHL6h1K-TmS8mXgEikqJolFR-oQuBkPJoWfo4MRZ8JFuSM4UOtS6bXQqghDGBV_YVicI5KZV8XyBqZljS0OZ3w3z9x44EGELGTGuFLhIQ7v5ZRmCqdOxXuxwZZXFtZM6GFnTj8GhzjUv9uV5Cl8Td-iUXMonT07A7GczMsQvqwbGgQiMGNGZbwZB-s"/>
+</div>
+</section>
+<!-- The Problem Section -->
+<section class="bg-brand-royal py-24 text-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<span class="font-label uppercase tracking-widest text-sm opacity-70 mb-4 block">Giai đoạn 01</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold leading-tight">Vấn đề</h2>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">01.</span>
+<h3 class="text-xl font-bold">Thiếu thông tin uy tín</h3>
+<p class="opacity-80 font-body leading-relaxed">Người dùng gặp khó khăn khi tìm kiếm hồ sơ thợ có tay nghề và kinh nghiệm thực tế được xác thực.</p>
+</div>
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">02.</span>
+<h3 class="text-xl font-bold">Khả năng tiếp cận hạn chế</h3>
+<p class="opacity-80 font-body leading-relaxed">Sự kết nối giữa thợ và khách hàng vẫn phụ thuộc vào truyền miệng, thiếu một nền tảng tập trung.</p>
+</div>
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">03.</span>
+<h3 class="text-xl font-bold">Chi phí không minh bạch</h3>
+<p class="opacity-80 font-body leading-relaxed">Tình trạng nâng giá hoặc chi phí phát sinh không rõ ràng gây mất niềm tin nơi người tiêu dùng.</p>
+</div>
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">04.</span>
+<h3 class="text-xl font-bold">Chất lượng không đảm bảo</h3>
+<p class="opacity-80 font-body leading-relaxed">Không có quy trình kiểm chuẩn và bảo hành sau khi hoàn thành công việc sửa chữa.</p>
+</div>
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">05.</span>
+<h3 class="text-xl font-bold">Độ tin cậy và an toàn kém</h3>
+<p class="opacity-80 font-body leading-relaxed">Lo ngại về an ninh khi cho người lạ vào nhà mà không qua các bước định danh rõ ràng.</p>
+</div>
+<div class="space-y-4">
+<span class="text-3xl font-headline font-bold opacity-30">06.</span>
+<h3 class="text-xl font-bold">Khó khăn trong giao tiếp</h3>
+<p class="opacity-80 font-body leading-relaxed">Rào cản về việc mô tả lỗi kĩ thuật dẫn đến hiểu lầm trong báo giá và thi công.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Solution Section -->
+<section class="bg-brand-canvas py-24">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="mb-20 text-center max-w-2xl mx-auto">
+<span class="font-label uppercase tracking-widest text-sm text-brand-royal font-semibold mb-4 block">Giải pháp thiết kế</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-brand-charcoal">Xây dựng niềm tin thông qua nền tảng số</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Solution Cards -->
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">verified_user</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Cung cấp thông tin uy tín</h3>
+<p class="text-on-surface-variant leading-relaxed">Hệ thống đánh giá 5 sao và nhận xét từ khách hàng cũ được xác thực 100%.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">public</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Tăng khả năng tiếp cận</h3>
+<p class="text-on-surface-variant leading-relaxed">Công nghệ định vị giúp khách hàng tìm thấy thợ gần nhất chỉ trong 30 giây.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">payments</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Minh bạch chi phí</h3>
+<p class="text-on-surface-variant leading-relaxed">Bảng giá niêm yết rõ ràng và tính năng báo giá trước khi bắt đầu công việc.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">high_quality</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Đảm bảo chất lượng</h3>
+<p class="text-on-surface-variant leading-relaxed">Chính sách bảo hành tích hợp ngay trên ứng dụng cho mọi dịch vụ.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">security</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Đảm bảo an toàn</h3>
+<p class="text-on-surface-variant leading-relaxed">Mọi đối tác thợ đều phải qua quy trình định danh (eKYC) nghiêm ngặt.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant/30 flex flex-col justify-between h-[320px] hover:border-brand-royal transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-brand-royal">chat</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Hỗ trợ giao tiếp</h3>
+<p class="text-on-surface-variant leading-relaxed">Tích hợp khung chat thông minh kèm gửi ảnh/video hiện trạng hư hỏng.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- App Flow Section -->
+<section class="py-24 overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div class="max-w-xl">
+<span class="font-label uppercase tracking-widest text-sm text-brand-royal font-semibold mb-4 block">Visual Interface</span>
+<h2 class="font-headline text-4xl font-bold text-brand-charcoal">Luồng App: Onboarding &amp; Registration</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm">Thiết kế tối giản giúp thợ dễ dàng đăng ký và người dùng nhanh chóng tìm kiếm dịch vụ.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Mobile Screens -->
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Smartphone screen showing mobile app onboarding splash screen with minimalist blue branding and welcome text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8TcVEmAFbQ925I0Sie0jEyw6qKYVRT2r8j1CI_5BSTB2Bom5TzRW5KQGefx_SuNBYmmlthnVVD-2fYbTKwQPB4tygaDEwYpKRfYIk4B_p77GrTUYNjuOYXWI8fB_v2T9hb7nT2atBQhpDCo4N6EVU9NNC36ALfedV6w_iGXJgahop3C5FhJu0WSOB8_GemCUcDXRIznF5r8IR8V-xXEXSCM3toVqmQ126t6e_4KaeLmmeJMxqLC2Q123I2aZv5eRCyv4ZgPMtVds"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Splash Screen</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="User login interface on a mobile phone featuring clean input fields and a prominent blue call to action button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuOF0XCoWSXmk6oZDrYmegWBE1JsrMuyiByuJi_SP0ShOYEs3WNEZRUcHif6H9tHcc_vo9B23IDIsGEK7z6T4s88egguP-8vZvvpQZc9_PjKxDdmVUrxBrjrjLi2MANLMKDo9OJ3Gghe83ZJK_3S_ZQcakJ5-Dd3Is6RH8L8ItrdmfchNjtk_Dz22zbH8SZOGex92vgaseq2pLO6jvVSZxyTNUgBv5KeAj8eoHDC980WsXv4cqD_iEvtkYUQ3aoBgrwUfIQhMGOWc"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Login</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Mobile registration flow with step-by-step progress bar and simple personal information form fields" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmqrc0XhTjisEEXzKfGk3dQbObjtzaa4UDLjl36AcKa8ffYMrgEBIXyc1SD-8_3YP3VYNbgzOayMkXV5Vr2SNLAiwrRzkYRQBavJu3oES0MCQBdFUhNb8gQZZygLHWMFCv4YgyYqmo-wJ9wdGvuXx2jZ9LmssROc6V09CIiZmWo_GJA-QgOTnVWlecLrC7i-6wIZMvxNvkv769CjseKcvQg8fEcYBtFqU1JLLMg1E73GWlxXW7EigAxK-ZI31Hu2XCD435lWl-IYw"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Registration</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Mobile app screen showing service category selection with large icons for plumbing, electrical, and carpentry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_hGcStqCaJoS0ZQ9xdgZah_qcTRZPiOaczNxAh2GLOBIkPuhQ7qh6cYvAd8TmiV4sqEBuog4iPddkHNdwFS-a8bmViwXkQx6LP6BVijJC0tICBt96k-TMWowp4cN97aHEulmRn_xE-mtCzwHdeU2K6EI2KM1jJSuygBq3ND9xgxizO8afprxS-CGBtPrNV1PEC72ob2qG2M927PWcZ9Zw5QpBeVwx7Mh2fajaII6PBimo3lOeK_V3XJjdrdZydMfW-QLTWxBfA8"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Categories</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Detailed service request screen on mobile UI with description field and photo upload area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVYvsVwnAYU0a96CygTScIhZ93PQKfFC7RrtasZznuIRs_HBLRsw74esOAXZNNzZT5wn39UXrAmn1cJqjJ9zYNHJEb_KPRk6Kdm4yoyHfTcD21yOkVamKA2FcrRqytsM5BDa0L-3YY6wfISc9UYV1ONiUHjMyeukeVKugxv4gN4d-hPufUNZn4ezrFogKIEctmdd_o23l-WmY68w2nsVLroaieMcKeQrg_7L99tsYjb9Wcdg_nZV2sLASfjL72JoqrQk3CGAl1M_Y"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Service Request</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Worker profile view on mobile app featuring rating stars, professional bio, and previous work portfolio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIiONYHwn05smLS5eX36N8kFu_MhiUkzEbLbPnvK3F7VlB6C7oD6z1W1bF_D0qSX4zKKwe3EYfgWsMqSRCPOu17El6ABhwKPhdhZi2IHXCHo60jMZkHnTW3nrBrCg2daZhCMc2EL8IyvIL7JdG75Y5H6W2lNjh-Qscz_LVxAl5EZM_OWgXjxKmhO--uDZpJ0ulaeUBPDgbsT72S_VaF3QjxJpnoSViyTS14h6YhfY4VXPqj65EIWxlPQivE7aULzX5BXgM6b_Z30"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Worker Profile</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Mobile booking confirmation screen with blue checkmark icon and summary of scheduled service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArXexWt_hgfMOESuqBif2iE782mJQ_WoOK3IXB5WwK1rlBbLey30P1LaL8F-Hch7OmQq9GpxEGXVKrDsGbD6ynREO-trjWphmVZZ_G5XkEx9QnYvYZH9S3kqf55brUFQ8L3mTu2-gXKFct-DXxR85ppi32dT8YmX-wLirDjLvL4faJZDr-aNNRI2GRn48FYfVZys2tSmOTJhMyyF6ZMLY9FgJk5ooOBAmsEZhIWV4Pm3F34DpnJZ5Le0wn1U93BASwn0weluDtZmc"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Booking Confirm</p>
+</div>
+<div class="space-y-4">
+<div class="aspect-[9/19] bg-zinc-200 rounded-lg overflow-hidden ring-1 ring-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Real-time map tracking screen on mobile interface showing worker location and ETA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASeEaUQS3WBTsW1Gnh67yOw3poRSwbsiY3HPi5snpEsDi-N1YE7aW2E2BgTvd_VDQ3XX3_FYGajWhe2kg6fetQsji5EWB2RsDzZh8PWoyrV5HYBZWuoltWaMdsgE6L0CLiv0jwCKPsNs-R1l5q9AceMnv_LW0k-Dv3CTrx0-QGy8CEMNBSzTfOH4m2_j6rKgmq-83w4C4bbnJV1H8bV4ilzWL_N5Tjv79pJZq5gwn-D3bpq-CotNOylD_XfBxqXg0QnrBwc-4JxLw"/>
+</div>
+<p class="text-center font-label text-xs font-semibold uppercase tracking-wider text-zinc-500">Tracking</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mega Link / Footer Transition -->
+<section class="max-w-[1440px] mx-auto px-8 mt-20">
+<div class="border-t border-zinc-200 pt-16">
+<span class="font-label uppercase tracking-widest text-xs text-zinc-500 mb-6 block">Kế tiếp</span>
+<a class="group block py-12" href="#">
+<h2 class="font-headline font-extrabold text-5xl md:text-8xl tracking-tighter text-brand-charcoal group-hover:text-brand-royal transition-colors duration-500 flex items-center gap-4">
+                        Tiếp theo: Đom Đóm AI
+                        <span class="material-symbols-outlined text-4xl md:text-7xl group-hover:translate-x-4 transition-transform duration-500">arrow_forward</span>
+</h2>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F1F4F6] dark:bg-zinc-800 w-full mt-24 tonal-depth-shift">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-[1440px] mx-auto border-t border-zinc-200/20">
+<div class="mb-8 md:mb-0">
+<span class="font-['Manrope'] font-bold text-zinc-900 dark:text-zinc-100 text-lg">Lâm Hoài Bảo</span>
+<p class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 mt-2">© 2024 Lâm Hoài Bảo. All rights reserved.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 underline-animation" href="#">Instagram</a>
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 underline-animation" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-sm leading-relaxed tracking-wide text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 underline-animation" href="#">Behance</a>
+</div>
+</div>
+</footer>
+</body></html>
