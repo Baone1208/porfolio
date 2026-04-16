@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 
-<html class="light" lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -82,142 +88,177 @@
         }
     </script>
 </head>
+
 <body class="bg-surface-bright text-on-surface font-body selection:bg-primary-container overflow-x-hidden w-full">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-gray-50/70 backdrop-blur-xl">
-<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
-<a class="text-xl font-bold tracking-tighter text-zinc-900 font-headline" href="#">Lâm Hoài Bảo</a>
-<div class="hidden md:flex gap-12">
-<a class="text-zinc-900 border-b-2 border-zinc-900 pb-1 font-['Manrope'] tracking-tight" href="#work">Work</a>
-<a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight" href="#expertise">Expertise</a>
-<a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight" href="#about">About</a>
-<a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight" href="#contact">Contact</a>
-</div>
-<!-- Mobile Toggle -->
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<main class="max-w-[1440px] mx-auto px-8 pt-48">
-<!-- Hero Section -->
-<section class="mb-48">
-<div class="grid grid-cols-12 gap-12 items-center">
-<!-- Left Column: Portrait Placeholders -->
-<div class="col-span-12 lg:col-span-6">
-<div class="grid grid-cols-2 gap-4">
-<div class="aspect-[3/4] bg-surface-container-highest rounded-[16px] flex items-center justify-center overflow-hidden border border-outline-variant/20">
-<img src="assets/avatar1.png" alt="Lâm Hoài Bảo Portrait Color" class="w-full h-full object-cover" />
-</div>
-<div class="aspect-[3/4] bg-surface-container-high rounded-[16px] flex items-center justify-center overflow-hidden border border-outline-variant/20 grayscale">
-<img src="assets/avatar2.jpg" alt="Lâm Hoài Bảo Portrait Grayscale" class="w-full h-full object-cover" />
-</div>
-</div>
-</div>
-<!-- Right Column: Hero Text -->
-<div class="col-span-12 lg:col-span-6">
-<h1 class="font-headline text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] font-black tracking-tighter mb-8">
-                        Lâm Hoài Bảo. <br/>
-<span class="text-outline">Product Designer.</span>
-</h1>
-<p class="font-body text-xl md:text-2xl max-w-xl leading-relaxed text-on-surface-variant">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-50/70 backdrop-blur-xl">
+        <div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+            <a class="text-xl font-bold tracking-tighter text-zinc-900 font-headline" href="#">Lâm Hoài Bảo</a>
+            <div class="hidden md:flex gap-12">
+                <a class="text-zinc-900 border-b-2 border-zinc-900 pb-1 font-['Manrope'] tracking-tight"
+                    href="#work">Work</a>
+                <a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight"
+                    href="#expertise">Expertise</a>
+                <a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight"
+                    href="#about">About</a>
+                <a class="text-zinc-500 font-medium hover:text-zinc-900 transition-colors duration-300 font-['Manrope'] tracking-tight"
+                    href="#contact">Contact</a>
+            </div>
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <main class="max-w-[1440px] mx-auto px-8 pt-48">
+        <!-- Hero Section -->
+        <section class="mb-48">
+            <div class="grid grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Portrait Placeholders -->
+                <div class="col-span-12 lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="aspect-[3/4] bg-surface-container-highest rounded-[16px] flex items-center justify-center overflow-hidden border border-outline-variant/20">
+                            <img src="assets/avatar1.png" alt="Lâm Hoài Bảo Portrait Color"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div
+                            class="aspect-[3/4] bg-surface-container-high rounded-[16px] flex items-center justify-center overflow-hidden border border-outline-variant/20">
+                            <img src="assets/avatar2.jpg" alt="Lâm Hoài Bảo Portrait Grayscale"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Hero Text -->
+                <div class="col-span-12 lg:col-span-6">
+                    <h1
+                        class="font-headline text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] font-black tracking-tighter mb-8">
+                        Lâm Hoài Bảo. <br />
+                        <span class="text-outline">Product Designer.</span>
+                    </h1>
+                    <p class="font-body text-xl md:text-2xl max-w-xl leading-relaxed text-on-surface-variant">
                         Biến các yêu cầu kinh doanh phức tạp thành các giải pháp di động tinh tế.
                     </p>
-</div>
-</div>
-</section>
-<!-- Selected Work -->
-<section class="mb-48" id="work">
-<div class="flex items-baseline justify-between mb-16">
-<h2 class="font-headline text-sm uppercase tracking-[0.2em] font-bold text-primary">Selected Work</h2>
-<span class="text-outline-variant font-label text-sm">2023 — 2024</span>
-</div>
-<div class="flex flex-col gap-32">
-<!-- Project Card 1 -->
-<div class="grid grid-cols-12 gap-12 items-center group cursor-pointer">
-<div class="col-span-12 md:col-span-7 overflow-hidden rounded-xl bg-surface-container-low transition-colors duration-500 hover:bg-surface-container-highest">
-<img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist smartphone UI mockup showing a service marketplace interface with clean grid layouts and soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcckvliUtFzfQiY9-RuW9JZ_Gbr3BR8I3zjzXhOeyZZCMRgNAhzGBG0S4_yUD6ec6L2fcRnOx01E0Dgte-bIjz5TTSTPq5HXgF7_jvyy4BpvQ0fu_D6LtRdZkqnEgMlFyh7cUYySwKWp6f1iKP6cPW03DF3BCj8GX4vMi2QSJX60vVbnmzcbp38PGd5BY7l80s1EqvHalJb9TKtPE6BZ28Q5yzwm9p2YnN1UzxhcdM5zaxiMUNoZypaoYlD0itLWMOSmkENR-utpQ"/>
-</div>
-<div class="col-span-12 md:col-span-5">
-<span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">Mobile Platform</span>
-<h3 class="font-headline text-4xl font-bold mb-6 tracking-tight">Vua Thợ</h3>
-<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
-                            Nền tảng kết nối Thợ đa ngành nghề. Tối ưu hóa quy trình tìm kiếm và đặt lịch sửa chữa chuyên nghiệp ngay trên thiết bị di động.
+                </div>
+            </div>
+        </section>
+        <!-- Selected Work -->
+        <section class="mb-48" id="work">
+            <div class="flex items-baseline justify-between mb-16">
+                <h2 class="font-headline text-sm uppercase tracking-[0.2em] font-bold text-primary">Selected Work</h2>
+                <span class="text-outline-variant font-label text-sm">2023 — 2024</span>
+            </div>
+            <div class="flex flex-col gap-32">
+                <!-- Project Card 1 -->
+                <div class="grid grid-cols-12 gap-12 items-center group cursor-pointer">
+                    <div
+                        class="col-span-12 md:col-span-7 overflow-hidden rounded-xl bg-surface-container-low transition-colors duration-500 hover:bg-surface-container-highest">
+                        <img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Minimalist smartphone UI mockup showing a service marketplace interface with clean grid layouts and soft natural lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcckvliUtFzfQiY9-RuW9JZ_Gbr3BR8I3zjzXhOeyZZCMRgNAhzGBG0S4_yUD6ec6L2fcRnOx01E0Dgte-bIjz5TTSTPq5HXgF7_jvyy4BpvQ0fu_D6LtRdZkqnEgMlFyh7cUYySwKWp6f1iKP6cPW03DF3BCj8GX4vMi2QSJX60vVbnmzcbp38PGd5BY7l80s1EqvHalJb9TKtPE6BZ28Q5yzwm9p2YnN1UzxhcdM5zaxiMUNoZypaoYlD0itLWMOSmkENR-utpQ" />
+                    </div>
+                    <div class="col-span-12 md:col-span-5">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">Mobile
+                            Platform</span>
+                        <h3 class="font-headline text-4xl font-bold mb-6 tracking-tight">Vua Thợ</h3>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                            Nền tảng kết nối Thợ đa ngành nghề. Tối ưu hóa quy trình tìm kiếm và đặt lịch sửa chữa
+                            chuyên nghiệp ngay trên thiết bị di động.
                         </p>
-<a class="inline-flex items-center gap-2 font-label font-bold text-sm uppercase tracking-wider border-b-2 border-primary pb-1 group-hover:text-primary transition-colors" href="vuatho.html">
-                            View Case Study 
+                        <a class="inline-flex items-center gap-2 font-label font-bold text-sm uppercase tracking-wider border-b-2 border-primary pb-1 group-hover:text-primary transition-colors"
+                            href="vuatho.html">
+                            View Case Study
                             <span class="material-symbols-outlined text-sm">arrow_outward</span>
-</a>
-</div>
-</div>
-<!-- Project Card 2 -->
-<div class="grid grid-cols-12 gap-12 items-center group cursor-pointer">
-<div class="col-span-12 md:col-span-5 order-2 md:order-1">
-<span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">AI &amp; Agriculture</span>
-<h3 class="font-headline text-4xl font-bold mb-6 tracking-tight">Đom Đóm AI</h3>
-<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
-                            Trợ lý Nông nghiệp Thông minh. Ứng dụng trí tuệ nhân tạo để theo dõi sức khỏe cây trồng và dự báo thời tiết chính xác cho nhà nông.
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="grid grid-cols-12 gap-12 items-center group cursor-pointer">
+                    <div class="col-span-12 md:col-span-5 order-2 md:order-1">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">AI &amp;
+                            Agriculture</span>
+                        <h3 class="font-headline text-4xl font-bold mb-6 tracking-tight">Đom Đóm AI</h3>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                            Trợ lý Nông nghiệp Thông minh. Ứng dụng trí tuệ nhân tạo để theo dõi sức khỏe cây trồng và
+                            dự báo thời tiết chính xác cho nhà nông.
                         </p>
-<a class="inline-flex items-center gap-2 font-label font-bold text-sm uppercase tracking-wider border-b-2 border-primary pb-1 group-hover:text-primary transition-colors" href="domdomai.html">
-                            View Case Study 
+                        <a class="inline-flex items-center gap-2 font-label font-bold text-sm uppercase tracking-wider border-b-2 border-primary pb-1 group-hover:text-primary transition-colors"
+                            href="domdomai.html">
+                            View Case Study
                             <span class="material-symbols-outlined text-sm">arrow_outward</span>
-</a>
-</div>
-<div class="col-span-12 md:col-span-7 order-1 md:order-2 overflow-hidden rounded-xl bg-surface-container-low transition-colors duration-500 hover:bg-surface-container-highest">
-<img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="Digital assistant interface on mobile screen displaying agricultural data visualizations and clean white dashboard elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCroSk76CInakC8TaZGhgmaFFfsqONzNjVv-oSTRkOwtljJiFB34pith1O-wSvgQTB9N_PZKFzF2YPwmbt7p2rmALXlAGj_a3crFucbM_ln_TM9iUowIQV2dd2Be8OQiH9r-8SntrePrwPf-ZZYybbMGX-g15wQ6M89IKsThX37bJf7UYPYGCMpPr0Ij6UDW98396dfOs0XXwXqNlLlNPc2uDYPOxCbIDVLSi0YK-5L7S0ABoEi91Vj5pZzq-gi03owexDzKo8wK2k"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Expertise Area -->
-<section class="mb-48 py-24 bg-surface-container-low -mx-8 px-8 rounded-xl" id="expertise">
-<div class="max-w-[1440px] mx-auto">
-<h2 class="font-headline text-sm uppercase tracking-[0.2em] font-bold text-primary mb-16">Expertise</h2>
-<div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant/20">
-<div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 pr-8">
-<span class="block font-label text-xs text-outline mb-4">01</span>
-<h4 class="font-headline text-xl font-bold mb-4">Phân tích yêu cầu</h4>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Nghiên cứu thị trường và người dùng để xác định các bài toán kinh doanh cốt lõi.</p>
-</div>
-<div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 px-0 md:px-8">
-<span class="block font-label text-xs text-outline mb-4">02</span>
-<h4 class="font-headline text-xl font-bold mb-4">Thiết kế UI</h4>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Xây dựng hệ thống ngôn ngữ thị giác hiện đại, tối giản và tập trung vào trải nghiệm.</p>
-</div>
-<div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 px-0 md:px-8">
-<span class="block font-label text-xs text-outline mb-4">03</span>
-<h4 class="font-headline text-xl font-bold mb-4">Prototype</h4>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Tạo ra các bản mẫu tương tác cao để kiểm chứng luồng người dùng hiệu quả.</p>
-</div>
-<div class="py-12 px-0 md:pl-8">
-<span class="block font-label text-xs text-outline mb-4">04</span>
-<h4 class="font-headline text-xl font-bold mb-4">Hoàn thiện</h4>
-<p class="font-body text-sm text-on-surface-variant leading-relaxed">Đảm bảo chất lượng sản phẩm cuối cùng đạt tiêu chuẩn cao nhất về thẩm mỹ.</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full bg-gray-100 dark:bg-zinc-900 border-t border-zinc-200 mt-24">
-<div class="w-full px-8 py-20 flex flex-col items-start gap-12 max-w-[1440px] mx-auto">
-<div class="w-full text-center py-20">
-<a class="break-all break-words font-headline text-[clamp(2rem,10vw,8rem)] font-black tracking-tighter text-zinc-900 hover:opacity-80 transition-all duration-300" href="mailto:baotsq@gmail.com">
+                        </a>
+                    </div>
+                    <div
+                        class="col-span-12 md:col-span-7 order-1 md:order-2 overflow-hidden rounded-xl bg-surface-container-low transition-colors duration-500 hover:bg-surface-container-highest">
+                        <img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Digital assistant interface on mobile screen displaying agricultural data visualizations and clean white dashboard elements"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCroSk76CInakC8TaZGhgmaFFfsqONzNjVv-oSTRkOwtljJiFB34pith1O-wSvgQTB9N_PZKFzF2YPwmbt7p2rmALXlAGj_a3crFucbM_ln_TM9iUowIQV2dd2Be8OQiH9r-8SntrePrwPf-ZZYybbMGX-g15wQ6M89IKsThX37bJf7UYPYGCMpPr0Ij6UDW98396dfOs0XXwXqNlLlNPc2uDYPOxCbIDVLSi0YK-5L7S0ABoEi91Vj5pZzq-gi03owexDzKo8wK2k" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Expertise Area -->
+        <section class="mb-48 py-24 bg-surface-container-low -mx-8 px-8 rounded-xl" id="expertise">
+            <div class="max-w-[1440px] mx-auto">
+                <h2 class="font-headline text-sm uppercase tracking-[0.2em] font-bold text-primary mb-16">Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant/20">
+                    <div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 pr-8">
+                        <span class="block font-label text-xs text-outline mb-4">01</span>
+                        <h4 class="font-headline text-xl font-bold mb-4">Phân tích yêu cầu</h4>
+                        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Nghiên cứu thị trường và
+                            người dùng để xác định các bài toán kinh doanh cốt lõi.</p>
+                    </div>
+                    <div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 px-0 md:px-8">
+                        <span class="block font-label text-xs text-outline mb-4">02</span>
+                        <h4 class="font-headline text-xl font-bold mb-4">Thiết kế UI</h4>
+                        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Xây dựng hệ thống ngôn ngữ
+                            thị giác hiện đại, tối giản và tập trung vào trải nghiệm.</p>
+                    </div>
+                    <div class="py-12 border-b md:border-b-0 md:border-r border-outline-variant/20 px-0 md:px-8">
+                        <span class="block font-label text-xs text-outline mb-4">03</span>
+                        <h4 class="font-headline text-xl font-bold mb-4">Prototype</h4>
+                        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Tạo ra các bản mẫu tương
+                            tác cao để kiểm chứng luồng người dùng hiệu quả.</p>
+                    </div>
+                    <div class="py-12 px-0 md:pl-8">
+                        <span class="block font-label text-xs text-outline mb-4">04</span>
+                        <h4 class="font-headline text-xl font-bold mb-4">Hoàn thiện</h4>
+                        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Đảm bảo chất lượng sản phẩm
+                            cuối cùng đạt tiêu chuẩn cao nhất về thẩm mỹ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full bg-gray-100 dark:bg-zinc-900 border-t border-zinc-200 mt-24">
+        <div class="w-full px-8 py-20 flex flex-col items-start gap-12 max-w-[1440px] mx-auto">
+            <div class="w-full text-center py-20">
+                <a class="break-all break-words font-headline text-[clamp(2rem,10vw,8rem)] font-black tracking-tighter text-zinc-900 hover:opacity-80 transition-all duration-300"
+                    href="mailto:baotsq@gmail.com">
                     baotsq@gmail.com
                 </a>
-</div>
-<div class="w-full flex flex-col md:flex-row justify-between items-end gap-8 pt-12 border-t border-zinc-200 dark:border-zinc-800">
-<div class="flex flex-col gap-4">
-<span class="text-4xl font-black text-zinc-900 uppercase font-headline">Lâm Hoài Bảo</span>
-<p class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] text-sm">© 2024 Lâm Hoài Bảo. Built for the Digital Gallery.</p>
-</div>
-<div class="flex gap-8">
-<a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm underline decoration-2 underline-offset-8" href="#">Next Project</a>
-<a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm" href="#">Instagram</a>
-<a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm" href="#">LinkedIn</a>
-<a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm" href="#">Dribbble</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+            </div>
+            <div
+                class="w-full flex flex-col md:flex-row justify-between items-end gap-8 pt-12 border-t border-zinc-200 dark:border-zinc-800">
+                <div class="flex flex-col gap-4">
+                    <span class="text-4xl font-black text-zinc-900 uppercase font-headline">Lâm Hoài Bảo</span>
+                    <p class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] text-sm">© 2024 Lâm
+                        Hoài Bảo. Built for the Digital Gallery.</p>
+                </div>
+                <div class="flex gap-8">
+                    <a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm underline decoration-2 underline-offset-8"
+                        href="#">Next Project</a>
+                    <a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm"
+                        href="#">Instagram</a>
+                    <a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm"
+                        href="#">LinkedIn</a>
+                    <a class="text-zinc-600 font-['Manrope'] font-bold uppercase tracking-[0.05em] hover:text-zinc-900 transition-all text-sm"
+                        href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
